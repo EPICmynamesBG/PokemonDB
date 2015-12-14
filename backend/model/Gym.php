@@ -26,7 +26,7 @@ class Gym {
     }
 
     public function getLeader() {
-        $result = Database::query(SQL::getLeaderForGym($this->id));
+        $result = Database::query(SQL::leaderOfGym($this->id));
 
         if (mysqli_num_rows($result) > 0) {
             $row = $result->fetch_array();
